@@ -10,6 +10,16 @@ export default Ember.Route.extend({
     newClimb.save();
     this.transitionTo('index');
   },
+
+  update(climb, params) {
+    Object.keys(params).forEach(function(key) {
+      if(params[key]!==undefined) {
+        climb.set(key,params[key]);
+      }
+    });
+  climb.save();
+  this.transitionTo('index');
+  },
     destroyclimb(climb) {
       climb.destroyRecord();
       this.transitionTo('index');

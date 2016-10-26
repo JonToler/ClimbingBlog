@@ -1,0 +1,15 @@
+{{#if updateClimbForm}}
+  <h4>Update {{climb.location}}'s</h4>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="location">location</label>
+        {{input value=location id="location" placeholder=climb.location}}
+      </div>
+
+      <button {{action 'update' climb}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'updateClimbForm'}}>Update</button>
+{{/if}}
