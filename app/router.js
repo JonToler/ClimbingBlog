@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('contact');
   this.route('climb');
   this.route('climb-tile');
+  this.route('trail', {path: '/trail/:climb_id'});
 });
 
 export default Router;

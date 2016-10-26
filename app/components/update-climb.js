@@ -7,7 +7,6 @@ export default Ember.Component.extend({
        this.set('updateClimbForm', true);
      },
      update(climb) {
-       console.log("app.component.update");
        var params = {
          location: this.get('location')
        };
