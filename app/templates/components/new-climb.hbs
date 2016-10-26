@@ -1,0 +1,25 @@
+{{#if addNewClimb}}
+  <h1>Display new climb form - to be replaced with form code soon.</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="location">location</label>
+        {{input value=location id="location"}}
+      </div>
+
+      <div class="form-group">
+        <label for="difficulty">Difficulty</label>
+        {{input value=difficulty id="difficulty"}}
+      </div>
+
+      <div class="form-group">
+        <label for="image">Image URL</label>
+        {{input value=image id="image"}}
+      </div>
+
+      <button {{action 'saveClimb1'}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'climbFormShow'}}>New Climb</button>
+{{/if}}
