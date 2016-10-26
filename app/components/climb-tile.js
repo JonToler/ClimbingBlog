@@ -8,6 +8,11 @@ export default Ember.Component.extend({
    },
     imageHide: function() {
       this.set('isImageShowing', false);
+    },
+    delete(climb) {
+      if (confirm('Are you sure you want to delete this climb?')) {
+        this.sendAction('destroyclimb', climb);
+      }
     }
  }
 });
