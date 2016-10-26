@@ -1,0 +1,19 @@
+
+<div class="row">
+  <div class="col-sm-6">
+    {{#if isImageShowing }}
+      <p><img src={{climb.image}} alt="loading...." {{action 'imageHide'}}></p>
+    {{else}}
+      <button {{action 'imageShow'}} >Show image</button>
+    {{/if}}
+  </div>
+  <div class="col-sm-6">
+    {{climb.description}}
+    <hr>
+    {{climb.difficulty}}
+    <br>
+       {{climb.location}}
+  </div>
+
+
+</div>

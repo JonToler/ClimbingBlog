@@ -5,7 +5,8 @@
 <ul>
   {{#each model as | climb|}}
     <div class="jumbotron">
-      <li>{{climb.name}}{{climb.location}} <img src="{{climb.image}}" alt="{{climb.type}}" /></li>
+    {{climb-tile climb=climb}} 
+
     </div>
   {{/each}}
 </ul>
