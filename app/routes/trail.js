@@ -19,15 +19,19 @@ export default Ember.Route.extend({
      climb.destroyRecord();
      this.transitionTo('index');
    },
-   destroyTrail(trail) {
-  var comment_deletions = trail.get('comments').map(function(comment) {
-    return comment.destroyRecord();
-  });
-  Ember.RSVP.all(comment_deletions).then(function() {
-    return trail.destroyRecord();
-  });
-      this.transitionTo('index');
-    },
+   destroyComment(comment){
+     comment.destroyRecord();
+     this.transitionTo('trail');
+   },
+  //  destroyComment(comment) {
+  // var comment_deletions = trail.get('comments').map(function(comment) {
+  //   return comment.destroyRecord();
+  // });
+  // Ember.RSVP.all(comment_deletions).then(function() {
+  //   return trail.destroyRecord();
+  // });
+  //     this.transitionTo('index');
+  //   },
     saveComment(params) {
       var newComment = this.store.createRecord('comment', params);
       var climb = params.climb;

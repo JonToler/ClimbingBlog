@@ -7,5 +7,8 @@ export default Ember.Component.extend({
         this.sendAction('destroyClimb', climb);
       }
     },
+    destroyComment(comment){
+      this.sendAction('destroyComment', comment);
+    }
   }
 });
