@@ -8,14 +8,11 @@
     {{/if}}
   </div>
   <div class="col-sm-6">
-    {{climb.description}}
+    {{#link-to 'trail' climb.id}}{{climb.description}}
     <hr>
     {{climb.difficulty}}
     <br>
-       {{climb.location}}
+       {{climb.location}}{{/link-to}}
   </div>
-  {{update-climb climb=climb update="update"}}
-  <button {{action 'delete' climb}}>Delete climb</button>
-
 
 </div>

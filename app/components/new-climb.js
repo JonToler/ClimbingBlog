@@ -7,6 +7,7 @@ export default Ember.Component.extend({
       this.set('addNewClimb', true);
     },
     saveClimb1() {
+      debugger; 
           var params = {
             location: this.get('location'),
             difficulty: this.get('difficulty'),

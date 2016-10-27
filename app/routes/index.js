@@ -6,6 +6,7 @@ export default Ember.Route.extend({
   },
   actions: {
   saveClimb3(params) {
+    debugger; 
     var newClimb = this.store.createRecord('climb', params);
     newClimb.save();
     this.transitionTo('index');
