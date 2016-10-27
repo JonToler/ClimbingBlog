@@ -17,9 +17,12 @@
 
 <ul>
   {{#each model.comments as |comment|}}
+  <div class="jumbotron">
     <li>by:{{comment.name}} - {{comment.rating}}  {{comment.comment}}</li>
+    {{comment-tile comment=comment destroyComment="destroyComment"}}
+  </div>
   {{/each}}
 </ul>
 
-{{new-comment saveComment="saveComment"}}
+<!-- {{new-comment saveComment="saveComment" }} -->
 <hr>

@@ -4,3 +4,20 @@ Located in {{climb.location}}.
 <p><img src={{climb.image}} alt="Loading....."></p>
 
 <button {{action 'delete' climb}}>Delete</button>
+<strong><hr></strong>
+
+<h2> Comments </h2>
+
+<ul>
+  <h1>list</h1>
+  {{#each climb.comment as |comment|}}
+    {{comment-tile comment=comment}}
+  {{else}}
+    comment not working
+  {{/each}}
+</ul>
+<hr>
+<hr>
+<hr>
+<!-- <li>{{comment.rating}} - {{comment.comment}} - by {{comment.name}}</li>
+<button {{action 'delete' comment}}>Delete Comment</button> -->

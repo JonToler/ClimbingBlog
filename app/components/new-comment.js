@@ -10,10 +10,12 @@ export default Ember.Component.extend({
        var params = {
          name: this.get('name'),
          rating: this.get('rating'),
-         comment: this.get('comment')
+         comment: this.get('comment'),
+         climb: this.get('climb')
        };
        this.set('addNewComment', false);
        this.sendAction('saveComment', params);
      }
+
     }
   });
