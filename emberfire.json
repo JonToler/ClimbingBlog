@@ -15,6 +15,14 @@
     "location":"Bend Oregon, little sister",
     "difficulty":"Easy",
     "image":"https://upload.wikimedia.org/wikipedia/commons/c/c3/Three_sisters2.jpg"
-
-  }]
+  }],
+  "comments": [{
+    "name": "Nhat Hoang",
+    "rating": "good",
+    "comment": "the climb was mellow and elevation gain was moderate"
+    },{
+    "name": "Jon Toler",
+    "rating": "Not bad",
+    "comment": "The climb was challenging, but worth it."
+    }]
 }

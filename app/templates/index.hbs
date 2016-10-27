@@ -6,9 +6,20 @@
 </div>
 
 <ul>
-  {{#each model as | climb|}}
+  {{#each model.climbs as | climb|}}
     <div class="jumbotron">
     {{climb-tile climb=climb }}
     </div>
   {{/each}}
 </ul>
+
+<h2> All Reviews </h2>
+
+<ul>
+  {{#each model.comments as |comment|}}
+    <li>by:{{comment.name}} - {{comment.rating}}  {{comment.comment}}</li>
+  {{/each}}
+</ul>
+
+{{new-comment saveComment="saveComment"}}
+<hr>

@@ -2,27 +2,20 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(){
-    return this.store.findAll('climb');
+    return Ember.RSVP.hash({
+      climbs: this.store.findAll('climb'),
+      comments: this.store.findAll('comment')
+    });
   },
   actions: {
   saveClimb3(params) {
-    debugger; 
     var newClimb = this.store.createRecord('climb', params);
     newClimb.save();
     this.transitionTo('index');
   },
-
-  update(climb, params) {
-    Object.keys(params).forEach(function(key) {
-      if(params[key]!==undefined) {
-        climb.set(key,params[key]);
-      }
-    });
-  climb.save();
-  this.transitionTo('index');
-  },
-    destroyclimb(climb) {
-      climb.destroyRecord();
+    saveComment(params) {
+      var newComment = this.store.createRecord('comment', params);
+      newComment.save();
       this.transitionTo('index');
     }
   }
